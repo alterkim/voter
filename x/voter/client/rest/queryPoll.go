@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/rest"
 )
 
-func listPollHandler(cliCtx context.CLIContext, storeName string) http.HandlerFunc {
+func ListPollHandler(cliCtx context.CLIContext, storeName string) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		res, _, err := cliCtx.QueryWithData(fmt.Sprintf("custom/%s/list-poll", storeName), nil)
 		if err != nil {
