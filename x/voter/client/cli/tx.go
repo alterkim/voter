@@ -5,10 +5,10 @@ import (
 
 	"github.com/spf13/cobra"
 
+	"github.com/alterkim/voter/x/voter/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/vrde/voter/x/voter/types"
 )
 
 // GetTxCmd returns the transaction commands for this module
@@ -22,7 +22,7 @@ func GetTxCmd(cdc *codec.Codec) *cobra.Command {
 	}
 
 	voterTxCmd.AddCommand(flags.PostCommands(
-    // this line is used by starport scaffolding
+		// this line is used by starport scaffolding
 		GetCmdCreatePoll(cdc),
 	)...)
 

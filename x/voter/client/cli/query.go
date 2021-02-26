@@ -13,7 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/vrde/voter/x/voter/types"
+	"github.com/alterkim/voter/x/voter/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module
@@ -29,7 +29,7 @@ func GetQueryCmd(queryRoute string, cdc *codec.Codec) *cobra.Command {
 
 	voterQueryCmd.AddCommand(
 		flags.GetCommands(
-      // this line is used by starport scaffolding
+			// this line is used by starport scaffolding
 			GetCmdListPoll(queryRoute, cdc),
 		)...,
 	)

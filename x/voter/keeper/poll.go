@@ -1,9 +1,9 @@
 package keeper
 
 import (
+	"github.com/alterkim/voter/x/voter/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/vrde/voter/x/voter/types"
 )
 
 func (k Keeper) CreatePoll(ctx sdk.Context, poll types.Poll) {

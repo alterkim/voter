@@ -2,15 +2,15 @@ package cli
 
 import (
 	"bufio"
-  
+
 	"github.com/spf13/cobra"
 
+	"github.com/alterkim/voter/x/voter/types"
 	"github.com/cosmos/cosmos-sdk/client/context"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	"github.com/cosmos/cosmos-sdk/x/auth/client/utils"
-	"github.com/vrde/voter/x/voter/types"
 )
 
 func GetCmdCreatePoll(cdc *codec.Codec) *cobra.Command {
@@ -19,9 +19,9 @@ func GetCmdCreatePoll(cdc *codec.Codec) *cobra.Command {
 		Short: "Creates a new poll",
 		Args:  cobra.MinimumNArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
-      argsTitle := string(args[0])
-      argsOptions := string(args[1])
-      
+			argsTitle := string(args[0])
+			argsOptions := string(args[1])
+
 			cliCtx := context.NewCLIContext().WithCodec(cdc)
 			inBuf := bufio.NewReader(cmd.InOrStdin())
 			txBldr := auth.NewTxBuilderFromCLI(inBuf).WithTxEncoder(utils.GetTxEncoder(cdc))

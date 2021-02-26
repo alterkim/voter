@@ -1,9 +1,9 @@
 package voter
 
 import (
+	"github.com/alterkim/voter/x/voter/keeper"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/vrde/voter/x/voter/keeper"
 	// abci "github.com/tendermint/tendermint/abci/types"
 )
 

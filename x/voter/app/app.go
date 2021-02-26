@@ -10,6 +10,9 @@ import (
 	tmos "github.com/tendermint/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/alterkim/voter/x/voter"
+	voterkeeper "github.com/alterkim/voter/x/voter/keeper"
+	votertypes "github.com/alterkim/voter/x/voter/types"
 	bam "github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/simapp"
@@ -22,9 +25,6 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/params"
 	"github.com/cosmos/cosmos-sdk/x/staking"
 	"github.com/cosmos/cosmos-sdk/x/supply"
-	"github.com/vrde/voter/x/voter"
-	voterkeeper "github.com/vrde/voter/x/voter/keeper"
-	votertypes "github.com/vrde/voter/x/voter/types"
 	// this line is used by starport scaffolding
 )
 

@@ -8,15 +8,15 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
+	"github.com/alterkim/voter/x/voter/client/cli"
+	"github.com/alterkim/voter/x/voter/client/rest"
+	"github.com/alterkim/voter/x/voter/keeper"
+	"github.com/alterkim/voter/x/voter/types"
 	"github.com/cosmos/cosmos-sdk/client/context"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/bank"
-	"github.com/vrde/voter/x/voter/client/cli"
-	"github.com/vrde/voter/x/voter/client/rest"
-	"github.com/vrde/voter/x/voter/keeper"
-	"github.com/vrde/voter/x/voter/types"
 )
 
 // Type check to ensure the interface is properly implemented

@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/alterkim/voter/x/voter"
+	simapp "github.com/alterkim/voter/x/voter/app"
+	"github.com/alterkim/voter/x/voter/keeper"
+	"github.com/alterkim/voter/x/voter/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/vrde/voter/x/voter"
-	simapp "github.com/vrde/voter/x/voter/app"
-	"github.com/vrde/voter/x/voter/keeper"
-	"github.com/vrde/voter/x/voter/types"
 )
 
 var (

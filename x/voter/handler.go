@@ -3,9 +3,9 @@ package voter
 import (
 	"fmt"
 
+	"github.com/alterkim/voter/x/voter/keeper"
+	"github.com/alterkim/voter/x/voter/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/vrde/voter/x/voter/keeper"
-	"github.com/vrde/voter/x/voter/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 )
 
@@ -14,7 +14,7 @@ func NewHandler(k keeper.Keeper) sdk.Handler {
 	return func(ctx sdk.Context, msg sdk.Msg) (*sdk.Result, error) {
 		ctx = ctx.WithEventManager(sdk.NewEventManager())
 		switch msg := msg.(type) {
-    // this line is used by starport scaffolding
+		// this line is used by starport scaffolding
 		case types.MsgCreatePoll:
 			return handleMsgCreatePoll(ctx, k, msg)
 		default:
